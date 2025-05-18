@@ -36,8 +36,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: 'imptrial.html'
+          # Point to the directory containing your HTML file
+          # Ensure this directory exists in your repository and contains imptrial.html
+          path: './_site' # Or './public', or './docs' depending on what you created
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
